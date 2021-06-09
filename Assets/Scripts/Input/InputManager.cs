@@ -6,8 +6,8 @@ using UnityEngine.InputSystem;
 public class InputManager : MonoBehaviour
 {
 	#region Events
-	public delegate void MouseClickEvent(Vector2 position);
-	public event MouseClickEvent OnMouseClickEvent;
+	public delegate void PressDownEvent(Vector2 position);
+	public event PressDownEvent OnPressDown;
 	#endregion
 
 	private Controls controls;
@@ -49,14 +49,14 @@ public class InputManager : MonoBehaviour
 
 	private void Start()
 	{
-		controls.Mouse.Click.started += ctx => MouseClick(ctx);
+		controls.Gameplay.Press.started += ctx => PressDown(ctx);
 	}
 
-	private void MouseClick(InputAction.CallbackContext context)
+	private void PressDown(InputAction.CallbackContext context)
 	{
-		if(OnMouseClickEvent != null)
+		if(OnPressDown != null)
 		{
-			OnMouseClickEvent(controls.Mouse.Point.ReadValue<Vector2>());	
+			OnPressDown(controls.Gameplay.Position.ReadValue<Vector2>());	
 		}
 	}
 }

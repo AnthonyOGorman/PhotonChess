@@ -2,11 +2,11 @@
     "name": "Controls",
     "maps": [
         {
-            "name": "Mouse",
+            "name": "Gameplay",
             "id": "9ab7a88c-7590-4301-a7b1-b7077ea75c62",
             "actions": [
                 {
-                    "name": "Point",
+                    "name": "Position",
                     "type": "PassThrough",
                     "id": "8ab4f3c8-500a-4434-bebd-b2453c693b52",
                     "expectedControlType": "Vector2",
@@ -14,7 +14,7 @@
                     "interactions": ""
                 },
                 {
-                    "name": "Click",
+                    "name": "Press",
                     "type": "Button",
                     "id": "ab2635e3-bc94-4d8a-af58-1e18aa492caa",
                     "expectedControlType": "Button",
@@ -30,7 +30,18 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Point",
+                    "action": "Position",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9b093632-48b1-4266-be79-95aefcabe650",
+                    "path": "<Touchscreen>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Position",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -41,7 +52,18 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Click",
+                    "action": "Press",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5ceefe2a-c46f-419d-a0d9-0b2fd3a2c124",
+                    "path": "<Touchscreen>/press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Press",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

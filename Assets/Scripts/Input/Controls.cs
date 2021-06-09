@@ -1,4 +1,4 @@
-// GENERATED AUTOMATICALLY FROM 'Assets/Scripts/Controls.inputactions'
+// GENERATED AUTOMATICALLY FROM 'Assets/Scripts/Input/Controls.inputactions'
 
 using System;
 using System.Collections;
@@ -15,11 +15,11 @@ public class @Controls : IInputActionCollection, IDisposable
     ""name"": ""Controls"",
     ""maps"": [
         {
-            ""name"": ""Mouse"",
+            ""name"": ""Gameplay"",
             ""id"": ""9ab7a88c-7590-4301-a7b1-b7077ea75c62"",
             ""actions"": [
                 {
-                    ""name"": ""Point"",
+                    ""name"": ""Position"",
                     ""type"": ""PassThrough"",
                     ""id"": ""8ab4f3c8-500a-4434-bebd-b2453c693b52"",
                     ""expectedControlType"": ""Vector2"",
@@ -27,7 +27,7 @@ public class @Controls : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""Click"",
+                    ""name"": ""Press"",
                     ""type"": ""Button"",
                     ""id"": ""ab2635e3-bc94-4d8a-af58-1e18aa492caa"",
                     ""expectedControlType"": ""Button"",
@@ -43,7 +43,18 @@ public class @Controls : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Point"",
+                    ""action"": ""Position"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9b093632-48b1-4266-be79-95aefcabe650"",
+                    ""path"": ""<Touchscreen>/position"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Position"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -54,7 +65,18 @@ public class @Controls : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Click"",
+                    ""action"": ""Press"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5ceefe2a-c46f-419d-a0d9-0b2fd3a2c124"",
+                    ""path"": ""<Touchscreen>/press"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Press"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -63,10 +85,10 @@ public class @Controls : IInputActionCollection, IDisposable
     ],
     ""controlSchemes"": []
 }");
-        // Mouse
-        m_Mouse = asset.FindActionMap("Mouse", throwIfNotFound: true);
-        m_Mouse_Point = m_Mouse.FindAction("Point", throwIfNotFound: true);
-        m_Mouse_Click = m_Mouse.FindAction("Click", throwIfNotFound: true);
+        // Gameplay
+        m_Gameplay = asset.FindActionMap("Gameplay", throwIfNotFound: true);
+        m_Gameplay_Position = m_Gameplay.FindAction("Position", throwIfNotFound: true);
+        m_Gameplay_Press = m_Gameplay.FindAction("Press", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -113,49 +135,49 @@ public class @Controls : IInputActionCollection, IDisposable
         asset.Disable();
     }
 
-    // Mouse
-    private readonly InputActionMap m_Mouse;
-    private IMouseActions m_MouseActionsCallbackInterface;
-    private readonly InputAction m_Mouse_Point;
-    private readonly InputAction m_Mouse_Click;
-    public struct MouseActions
+    // Gameplay
+    private readonly InputActionMap m_Gameplay;
+    private IGameplayActions m_GameplayActionsCallbackInterface;
+    private readonly InputAction m_Gameplay_Position;
+    private readonly InputAction m_Gameplay_Press;
+    public struct GameplayActions
     {
         private @Controls m_Wrapper;
-        public MouseActions(@Controls wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Point => m_Wrapper.m_Mouse_Point;
-        public InputAction @Click => m_Wrapper.m_Mouse_Click;
-        public InputActionMap Get() { return m_Wrapper.m_Mouse; }
+        public GameplayActions(@Controls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Position => m_Wrapper.m_Gameplay_Position;
+        public InputAction @Press => m_Wrapper.m_Gameplay_Press;
+        public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
         public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(MouseActions set) { return set.Get(); }
-        public void SetCallbacks(IMouseActions instance)
+        public static implicit operator InputActionMap(GameplayActions set) { return set.Get(); }
+        public void SetCallbacks(IGameplayActions instance)
         {
-            if (m_Wrapper.m_MouseActionsCallbackInterface != null)
+            if (m_Wrapper.m_GameplayActionsCallbackInterface != null)
             {
-                @Point.started -= m_Wrapper.m_MouseActionsCallbackInterface.OnPoint;
-                @Point.performed -= m_Wrapper.m_MouseActionsCallbackInterface.OnPoint;
-                @Point.canceled -= m_Wrapper.m_MouseActionsCallbackInterface.OnPoint;
-                @Click.started -= m_Wrapper.m_MouseActionsCallbackInterface.OnClick;
-                @Click.performed -= m_Wrapper.m_MouseActionsCallbackInterface.OnClick;
-                @Click.canceled -= m_Wrapper.m_MouseActionsCallbackInterface.OnClick;
+                @Position.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnPosition;
+                @Position.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnPosition;
+                @Position.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnPosition;
+                @Press.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnPress;
+                @Press.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnPress;
+                @Press.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnPress;
             }
-            m_Wrapper.m_MouseActionsCallbackInterface = instance;
+            m_Wrapper.m_GameplayActionsCallbackInterface = instance;
             if (instance != null)
             {
-                @Point.started += instance.OnPoint;
-                @Point.performed += instance.OnPoint;
-                @Point.canceled += instance.OnPoint;
-                @Click.started += instance.OnClick;
-                @Click.performed += instance.OnClick;
-                @Click.canceled += instance.OnClick;
+                @Position.started += instance.OnPosition;
+                @Position.performed += instance.OnPosition;
+                @Position.canceled += instance.OnPosition;
+                @Press.started += instance.OnPress;
+                @Press.performed += instance.OnPress;
+                @Press.canceled += instance.OnPress;
             }
         }
     }
-    public MouseActions @Mouse => new MouseActions(this);
-    public interface IMouseActions
+    public GameplayActions @Gameplay => new GameplayActions(this);
+    public interface IGameplayActions
     {
-        void OnPoint(InputAction.CallbackContext context);
-        void OnClick(InputAction.CallbackContext context);
+        void OnPosition(InputAction.CallbackContext context);
+        void OnPress(InputAction.CallbackContext context);
     }
 }
