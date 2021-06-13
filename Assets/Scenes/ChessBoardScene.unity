@@ -302,10 +302,135 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f0fb276476712542b40a5dfb976f0af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boardX: 8
-  boardY: 8
-  squareDistance: 1.5
-  squareObject: {fileID: 3626459265997486586, guid: 0d22cfbb634d0af4bb813d17bf217c3e, type: 3}
+  pieces:
+  - obj: {fileID: 104878, guid: 48d5ea4ff810d0e4ea36af7235dd5fd7, type: 3}
+    type: 5
+    color: 1
+    position: {x: 0, y: 1}
+  - obj: {fileID: 104878, guid: 48d5ea4ff810d0e4ea36af7235dd5fd7, type: 3}
+    type: 5
+    color: 1
+    position: {x: 1, y: 1}
+  - obj: {fileID: 104878, guid: 48d5ea4ff810d0e4ea36af7235dd5fd7, type: 3}
+    type: 5
+    color: 1
+    position: {x: 2, y: 1}
+  - obj: {fileID: 104878, guid: 48d5ea4ff810d0e4ea36af7235dd5fd7, type: 3}
+    type: 5
+    color: 1
+    position: {x: 3, y: 1}
+  - obj: {fileID: 104878, guid: 48d5ea4ff810d0e4ea36af7235dd5fd7, type: 3}
+    type: 5
+    color: 1
+    position: {x: 4, y: 1}
+  - obj: {fileID: 104878, guid: 48d5ea4ff810d0e4ea36af7235dd5fd7, type: 3}
+    type: 5
+    color: 1
+    position: {x: 5, y: 1}
+  - obj: {fileID: 104878, guid: 48d5ea4ff810d0e4ea36af7235dd5fd7, type: 3}
+    type: 5
+    color: 1
+    position: {x: 6, y: 1}
+  - obj: {fileID: 104878, guid: 48d5ea4ff810d0e4ea36af7235dd5fd7, type: 3}
+    type: 5
+    color: 1
+    position: {x: 7, y: 1}
+  - obj: {fileID: 114028, guid: 43ef2ba32fda59c42a1410ea490d494b, type: 3}
+    type: 2
+    color: 1
+    position: {x: 0, y: 0}
+  - obj: {fileID: 114028, guid: 43ef2ba32fda59c42a1410ea490d494b, type: 3}
+    type: 2
+    color: 1
+    position: {x: 7, y: 0}
+  - obj: {fileID: 107724, guid: 7248632fb471af143947a88a47eae959, type: 3}
+    type: 4
+    color: 1
+    position: {x: 1, y: 0}
+  - obj: {fileID: 107724, guid: 7248632fb471af143947a88a47eae959, type: 3}
+    type: 4
+    color: 1
+    position: {x: 6, y: 0}
+  - obj: {fileID: 190264, guid: cd05c23b470229c44a8d53d6e86225f6, type: 3}
+    type: 3
+    color: 1
+    position: {x: 2, y: 0}
+  - obj: {fileID: 190264, guid: cd05c23b470229c44a8d53d6e86225f6, type: 3}
+    type: 3
+    color: 1
+    position: {x: 5, y: 0}
+  - obj: {fileID: 119820, guid: 9e4e635002b6a524ca896adb28e8e388, type: 3}
+    type: 0
+    color: 1
+    position: {x: 3, y: 0}
+  - obj: {fileID: 103078, guid: 6f38c700bedefe64f8364436528e5c3d, type: 3}
+    type: 1
+    color: 1
+    position: {x: 4, y: 0}
+  - obj: {fileID: 138226, guid: edd4f3477fd5a8b4599bf6c0dac39f1d, type: 3}
+    type: 5
+    color: 0
+    position: {x: 0, y: 6}
+  - obj: {fileID: 138226, guid: edd4f3477fd5a8b4599bf6c0dac39f1d, type: 3}
+    type: 5
+    color: 0
+    position: {x: 1, y: 6}
+  - obj: {fileID: 138226, guid: edd4f3477fd5a8b4599bf6c0dac39f1d, type: 3}
+    type: 5
+    color: 0
+    position: {x: 2, y: 6}
+  - obj: {fileID: 138226, guid: edd4f3477fd5a8b4599bf6c0dac39f1d, type: 3}
+    type: 5
+    color: 0
+    position: {x: 3, y: 6}
+  - obj: {fileID: 138226, guid: edd4f3477fd5a8b4599bf6c0dac39f1d, type: 3}
+    type: 5
+    color: 0
+    position: {x: 4, y: 6}
+  - obj: {fileID: 138226, guid: edd4f3477fd5a8b4599bf6c0dac39f1d, type: 3}
+    type: 5
+    color: 0
+    position: {x: 5, y: 6}
+  - obj: {fileID: 138226, guid: edd4f3477fd5a8b4599bf6c0dac39f1d, type: 3}
+    type: 5
+    color: 0
+    position: {x: 6, y: 6}
+  - obj: {fileID: 138226, guid: edd4f3477fd5a8b4599bf6c0dac39f1d, type: 3}
+    type: 5
+    color: 0
+    position: {x: 7, y: 6}
+  - obj: {fileID: 125018, guid: 9d3e9c36668dcfe44b524760a4c3a3b5, type: 3}
+    type: 2
+    color: 0
+    position: {x: 0, y: 7}
+  - obj: {fileID: 125018, guid: 9d3e9c36668dcfe44b524760a4c3a3b5, type: 3}
+    type: 2
+    color: 0
+    position: {x: 7, y: 7}
+  - obj: {fileID: 196802, guid: b6c7ad354ac474944ba26b2895a59759, type: 3}
+    type: 4
+    color: 0
+    position: {x: 1, y: 7}
+  - obj: {fileID: 196802, guid: b6c7ad354ac474944ba26b2895a59759, type: 3}
+    type: 4
+    color: 0
+    position: {x: 6, y: 7}
+  - obj: {fileID: 196866, guid: a71fd906a2159e247ab4d632e46947db, type: 3}
+    type: 3
+    color: 0
+    position: {x: 2, y: 7}
+  - obj: {fileID: 196866, guid: a71fd906a2159e247ab4d632e46947db, type: 3}
+    type: 3
+    color: 0
+    position: {x: 5, y: 7}
+  - obj: {fileID: 130826, guid: 861e95a585868b643bf2e4a1d0ae63b7, type: 3}
+    type: 0
+    color: 0
+    position: {x: 3, y: 7}
+  - obj: {fileID: 184594, guid: 1f7a3b3d104b8e44cb39f5356ae1d0bb, type: 3}
+    type: 1
+    color: 0
+    position: {x: 4, y: 7}
 --- !u!4 &739310743
 Transform:
   m_ObjectHideFlags: 0
