@@ -1,13 +1,15 @@
 using UnityEngine;
 
 [System.Serializable]
-public class ChessPiece
+public abstract class ChessPiece
 {
-	public enum Type { KING, QUEEN, ROOK, BISHOP, KNIGHT, PAWN };
-	public enum Color { BLACK, WHITE };
+	public enum PieceType { KING, QUEEN, ROOK, BISHOP, KNIGHT, PAWN };
+	public enum PieceColor { BLACK, WHITE };
 
-	public GameObject obj;
-	public Type type;
-	public Color color;
-	public Vector2 position;
+	public GameObject gameObject;
+	public abstract PieceType Type { get; }
+	public PieceColor Color { get; protected set; }
+	public Vector2Int position;
+
+	public abstract int[,] Evaluator(int[,] board, int boardSize);
 }
